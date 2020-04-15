@@ -11,7 +11,7 @@ class TasksController < ApplicationController
       @task = Task.new
   end
   def create
-         @task = Task.new(tasklist_params)
+         @task = Task.new(task_params)
     if @task.save
       flash[:success] = 'タスク が正常に追加されました'
       redirect_to @task
